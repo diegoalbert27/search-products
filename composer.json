@@ -1,0 +1,18 @@
+{
+    "name": "arbusto/search-products",
+    "description": "Scrapper para la busqueda de productos en ebay de forma periodica",
+    "autoload": {
+        "psr-4": {
+            "Arbusto\\SearchProducts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Hinagas",
+            "email": "hinagasrodriguez@gmail.com"
+        }
+    ],
+    "require": {
+        "phpgt/dom": "^4.1"
+    }
+}
