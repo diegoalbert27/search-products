@@ -29,9 +29,11 @@ $results_products->forEach(function ($product) {
 
   $product_info = $product->firstElementChild->lastElementChild;
   $product_link = $product_info->firstElementChild->href;
-  $product_title = $product_info->firstElementChild->innerText;
 
-  $product_subtitle = "{$product_info->children[1]->innerText}";
+  $product_title = $product_info->firstElementChild->innerText;
+  $product_title = str_replace('Opens in a new window or tab', '', $product_info->firstElementChild->innerText);
+
+  $product_subtitle = $product_info->children[1]->innerText;
 
   $product_details = $product_info->lastElementChild;
 
@@ -52,7 +54,15 @@ $results_products->forEach(function ($product) {
 $content = "link;title;subtitle;price;transfer;country;\n";
 foreach($products as $product) {
   $product_raw = implode(';', $product);
-  $content .= utf8_encode("{$product_raw}\n");
+  $content .= "{$product_raw}\n";
 }
 
-file_put_contents(__DIR__ . '/products.csv', $content);
+$output_dir = __DIR__ . '/../output';
+
+if (!is_dir($output_dir)) {
+  mkdir($output_dir);
+}
+
+if (file_put_contents($output_dir . '/products.csv', $content)) {
+  echo 'Ready File';
+}
