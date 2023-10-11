@@ -1,8 +1,8 @@
 # Scrapper de Productos en Ebay
 
-Scrapper hecho en php para la obtencion de productos en ebay. El scrapper funciona indicando la palabra clave
-de los productos que estes buscando. El realiza la consulta a la pagina y crea un archivo csv con los datos 
-obtenidos de los productos y genera un archivo csv.
+Scrapper hecho en php para la obtención de productos en ebay. 
+El scrapper funciona indicando la palabra clave de los productos que estés buscando. 
+Él realiza la consulta a la página y crea un archivo CSV con los datos obtenidos de los productos.
 
 ## Requeriemientos
 
@@ -10,26 +10,26 @@ obtenidos de los productos y genera un archivo csv.
 - Composer
 
 ## Instalacacion
-Descarga el repositorio o clonalo con el siguente comando
+Descargar el repositorio o clónalo con el siguiente comando
 
 ```shell
 git clone https://github.com/diegoalbert27/search-products.git
 ```
 
-Instalacion de las dependencias
+Instalación de las dependencias
 
 ```shell
 composer install
 ```
 
-Generar Busqueda
+Generar Búsqueda
 ```shell
 php /src/app.php
 ```
 
-## Personalizar busqueda
+## Personalizar búsqueda
 
-Por defecto busca laptops en ebay pero este parametro se puede cambiar en el siguente archivo
+Por defecto busca laptops en ebay, pero este parámetro puede ser cambiado en el siguiente archivo
 
 ```path
 /src/config/globals.php
